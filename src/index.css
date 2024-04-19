@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#root {
+  padding: 0 1rem;
+}
+
+@layer utilities {
+   progress::-webkit-progress-value {
+      background-color: rgb(14 165 233) ;/* Set the progress bar color */
+      border-radius: 10px; /* Rounded corners */
+    }
+    
+    progress::-moz-progress-bar {
+      background-color: rgb(14 165 233) ;/* Set the progress bar color for Firefox */
+      border-radius: 10px; /* Rounded corners */
+    }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-5 py-2 text-2xl bg-white/10 hover:bg-white/20 border-2 border-solid border-white/20 rounded-full block ml-auto
+  }
+}

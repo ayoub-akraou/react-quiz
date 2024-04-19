@@ -10,13 +10,12 @@ export default function Options({ question, dispatch, answer }) {
 					disabled={isAnswered}
 					onClick={() => dispatch({ type: "newAnswer", payload: index })}
 					key={option}
-					className={`block mb-4 bg-white/10 rounded-full w-full px-8 py-3 text-2xl text-start ${
-						hoverStyles
-					} transition-all ${answer === index && "translate-x-6"} ${
+					className={`block mb-4 bg-white/10 rounded-full w-full px-8 py-3 text-2xl text-start ${hoverStyles} transition-all ${answer === index && "translate-x-6"}  
+					${
 						isAnswered &&
 						(question.correctOption === index
-							? "bg-sky-600"
-							: "bg-amber-500")
+							? "!bg-sky-500"
+							: "!bg-amber-500")
 					}`}
 				>
 					{option}

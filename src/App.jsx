@@ -33,7 +33,7 @@ function reducer(state, action) {
 				...state,
 				questions: action.payload,
 				status: "ready",
-				remainingTime: state.questions.length * SECS_PER_QUESTION,
+				remainingTime: action.payload.length * SECS_PER_QUESTION,
 			};
 		case "dataFailed":
 			return { ...state, status: "error" };
